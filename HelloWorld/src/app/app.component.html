@@ -1,0 +1,14 @@
+<app-people-list [people]="people1" [selectedPersonInPeopleListComponent]="selectedPersonInAppComponent"
+    (selectPersonRequested)="onSelectRequested($event)"></app-people-list>
+<div *ngIf="selectedPersonInAppComponent">
+    <h2>Person deatils</h2>
+    <div>
+        <label>Name : </label> <span>{{selectedPersonInAppComponent.name}}</span>
+    </div>
+    <div>
+        <label>Email : </label> <span>{{selectedPersonInAppComponent.email}}</span>
+    </div>
+    <div>
+        <label>Age : </label> <span>{{selectedPersonInAppComponent.age}}</span>
+    </div>
+</div>

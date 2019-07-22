@@ -1,0 +1,16 @@
+<div>
+    <div>
+        <img 
+        *ngIf="selectedImage"
+        class="main-image" [src]="selectedImage">
+    </div>
+
+    <div class="list">
+        <!-- [class.selected]="imgUrl === selectedImage" -->
+        <!-- [ngClass]="{selected : imgUrl === selectedImage, kuku : true, moshe:123123}" -->
+        <img  *ngFor="let imgUrl of images"
+            [class.selected]="imgUrl === selectedImage"
+            [src]="imgUrl" (click)="selectImage(imgUrl)">
+    </div>
+
+</div>

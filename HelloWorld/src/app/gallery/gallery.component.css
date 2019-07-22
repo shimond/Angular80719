@@ -1,0 +1,18 @@
+.main-image
+{
+    width: 60%;
+    margin:0px auto;
+}
+.list
+{
+    margin:  0px auto;
+}
+
+.list img{
+    width: 120px;
+    margin: 10px;
+    cursor: pointer;
+}
+img.selected{
+    border: 2px solid black;
+}
