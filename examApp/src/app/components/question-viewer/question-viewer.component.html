@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>{{question.questionText}}</h1>
+
+    <div>
+        <button *ngFor="let ans of question.options" (click)="onOptionClicked(ans)" [disabled]="isQuestionLocked()"
+            [class.correct]="ans === question.answer && question.userAnswer"
+            [class.incorrect]="ans !== question.answer && question.userAnswer && ans === question.userAnswer">
+            {{ans}}</button>
+    </div>
+
+</div>

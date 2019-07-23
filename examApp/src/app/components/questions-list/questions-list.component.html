@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let q of questions" [class.selected]="q === selectedQuestion" [ngClass]="{correct:isCorrect(q) === 'Correct',
+         incorrect:isCorrect(q) === 'Incorrect',
+          'not-answered':isCorrect(q) === 'NotAnswered'}" (click)="onQuestionClicked(q)">
+        {{q.questionText}}
+    </li>
+</ul>

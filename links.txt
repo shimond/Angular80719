@@ -1,0 +1,6 @@
+Font : https://github.com/tonsky/FiraCode
+Typescript playgruond : http://www.typescriptlang.org/play/?target=1#code/MYGwhgzhQ
+TvMaze : http://api.tvmaze.com/search/shows?q=6
+
+
+Sdahan@jbh.co.il

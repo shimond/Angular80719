@@ -1,0 +1,14 @@
+<div>
+    <div class="left">
+        <app-questions-list [questions]="questions" [selectedQuestion]="currentQuestion"
+            (questionChangeRequested)="setCurrentQuestion($event)">
+        </app-questions-list>
+    </div>
+    <div *ngIf="currentQuestion">
+        <app-question-viewer [question]="currentQuestion" (userAnswered)="onUserAnswered($event)"></app-question-viewer>
+    </div>
+    <div class="footer">
+        <h2>{{getGrade() | percent}}</h2>
+    </div>
+
+</div>

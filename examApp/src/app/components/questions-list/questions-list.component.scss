@@ -1,0 +1,33 @@
+ul{
+    min-width: 300px;
+    list-style-type: none;
+    padding: 0px;
+    li{
+        width: 250px;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 9px;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+       
+    }
+    li:hover{
+        background-color: aquamarine !important;
+    }
+    li.selected{
+        background-color:coral !important;
+        font-weight: bold;
+
+    }
+    li.correct{
+        background-color: green;
+    }
+    li.incorrect{
+        background-color: red;
+    }
+    li.not-answered
+    {
+        background-color: ghostwhite;
+    }
+}
