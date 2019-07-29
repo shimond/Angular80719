@@ -1,0 +1,11 @@
+Products count = {{productsCount}}
+
+<div>
+    <button (click)="isViewerVisible = true">Show viewer</button>
+</div>
+<app-count-editor></app-count-editor>
+<div *ngIf="isViewerVisible">
+    <app-count-viewer></app-count-viewer>
+</div>
+
+<app-products-list></app-products-list>

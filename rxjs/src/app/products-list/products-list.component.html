@@ -1,0 +1,22 @@
+<h2>Products ({{products.length}})</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Descp</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td><button (click)="deleteProduct(product.id)">Delete {{product.name}}</button> </td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.detail}}</td>
+            <td><img [src]="product.image"></td>
+        </tr>
+    </tbody>
+</table>
