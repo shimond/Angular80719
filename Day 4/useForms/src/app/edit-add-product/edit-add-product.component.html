@@ -1,0 +1,46 @@
+<h2>productFormGroup.dirty = {{productFormGroup.dirty}}</h2>
+<form [formGroup]="productFormGroup" (ngSubmit)="onSubmit()">
+    <div>
+        <input type="text" formControlName="name" placeholder="Product name">
+        <app-error-viewer [errors]="productFormGroup.controls.name.errors"></app-error-viewer>
+
+    </div>
+    <div>
+        <textarea placeholder="Product detail" formControlName="detail"></textarea>
+        <app-error-viewer [errors]="productFormGroup.controls.detail.errors"></app-error-viewer>
+    </div>
+    <div>
+        <input type="number" formControlName="price" placeholder="Price">
+        <app-error-viewer [errors]="productFormGroup.controls.price.errors"></app-error-viewer>
+    </div>
+    <div>
+        <input type="url" class="url-input" placeholder="Image Url" formControlName="image">
+        <app-error-viewer [errors]="productFormGroup.controls.image.errors"></app-error-viewer>
+    </div>
+    <button type="submit" [disabled]="productFormGroup.invalid">Save</button>
+</form>
+
+<app-error-viewer [errors]="productFormGroup.errors"></app-error-viewer>
+
+
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Product object value</th>
+            <th>Form group value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <pre>{{product | json}}</pre>
+            </td>
+            <td>
+                <pre>{{productFormGroup.value | json}}</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
