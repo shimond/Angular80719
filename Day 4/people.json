@@ -1,0 +1,15 @@
+{
+    "people":[
+        {
+            "id": 1,
+            "fullName":"David Cohen",
+            "email":"david123@gmail.com",
+            "phone":"0544444444",
+            "isAdmin":true,
+            "familyStatus":"married",
+        }
+
+    ]
+
+
+}
