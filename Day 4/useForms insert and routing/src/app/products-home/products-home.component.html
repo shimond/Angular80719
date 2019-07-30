@@ -1,0 +1,6 @@
+<app-product-list [products]="products$ | async"
+(selectProductRequested)="onSelectProductRequested($event)"
+></app-product-list>
+<button mat-raised-button color="primary" type="button" 
+routerLink="/insert"
+>Insert new product</button>

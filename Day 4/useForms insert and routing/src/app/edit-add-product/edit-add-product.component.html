@@ -1,0 +1,68 @@
+<!-- <h2>productFormGroup.dirty = {{productFormGroup.dirty}}</h2> -->
+<mat-card class="card" *ngIf="productFormGroup">
+    <mat-card-header>
+        <mat-card-title>{{editInsertText}} Product</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="productFormGroup" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Product name" formControlName="name">
+                    </mat-form-field>
+                    <app-error-viewer [errors]="productFormGroup.controls.name.errors"></app-error-viewer>
+                </div>
+            </div>
+            <div>
+                <mat-form-field class="full-width">
+                    <textarea matInput placeholder="Product detail" formControlName="detail"></textarea>
+                </mat-form-field>
+                <app-error-viewer [errors]="productFormGroup.controls.detail.errors"></app-error-viewer>
+            </div>
+            <div>
+                <mat-form-field class="full-width">
+                    <input type="number" matInput formControlName="price" placeholder="Price">
+                </mat-form-field>
+                <app-error-viewer [errors]="productFormGroup.controls.price.errors"></app-error-viewer>
+            </div>
+            <div>
+                <mat-form-field class="url-input">
+                    <input type="url" matInput  placeholder="Image Url" formControlName="image">
+                </mat-form-field>
+                <app-error-viewer [errors]="productFormGroup.controls.image.errors"></app-error-viewer>
+            </div>
+            <button mat-raised-button color="primary" type="submit" [disabled]="productFormGroup.invalid">Save</button>
+        </form>
+
+        <app-error-viewer [errors]="productFormGroup.errors"></app-error-viewer>
+
+        <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Product object VS Product Form
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    json objects...
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <table>
+                        <thead>
+                            <tr>
+                                <th>Product object value</th>
+                                <th>Form group value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <pre>{{product | json}}</pre>
+                                </td>
+                                <td>
+                                    <pre>{{productFormGroup.value | json}}</pre>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+              </mat-expansion-panel>
+    </mat-card-content>
+</mat-card>

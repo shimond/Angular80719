@@ -1,0 +1,22 @@
+<mat-table [dataSource]="products">
+    <ng-container cdkColumnDef="name">
+        <mat-header-cell *cdkHeaderCellDef> Product name </mat-header-cell>
+        <mat-cell *cdkCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="description">
+        <mat-header-cell *cdkHeaderCellDef> Description </mat-header-cell>
+        <mat-cell *cdkCellDef="let row"> {{row.detail}} </mat-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="price">
+        <mat-header-cell *cdkHeaderCellDef> Price </mat-header-cell>
+        <mat-cell *cdkCellDef="let row"> {{row.price | currency}} </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <mat-header-row *cdkHeaderRowDef="['name', 'description', 'price']"></mat-header-row>
+    <mat-row
+    (click)="onRowClick(row)"
+    *cdkRowDef="let row; columns: ['name', 'description', 'price']"></mat-row>
+</mat-table>
