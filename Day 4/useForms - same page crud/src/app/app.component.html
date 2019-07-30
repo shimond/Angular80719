@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <app-edit-add-product></app-edit-add-product>
+
+<router-outlet></router-outlet> -->
+
+
+<app-layout>
+    <div class="container">
+        <!--  -->
+        <app-product-list [products]="products$ | async" (selectProductRequested)="onSelectProductRequested($event)">
+        </app-product-list>
+        <!-- <app-test></app-test> -->
+        <!-- <pre>{{currentProduct$ | async | json}}</pre> -->
+        <div *ngIf="currentProduct$ | async as currentProduct">
+            <app-edit-add-product [product]="currentProduct"></app-edit-add-product>
+        </div>
+
+    </div>
+
+</app-layout>
