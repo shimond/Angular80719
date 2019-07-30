@@ -1,0 +1,25 @@
+<h1>My Web App</h1>
+<div>
+    <a routerLink="home" routerLinkActive="current-link">Home</a> | <a routerLinkActive="current-link"
+        routerLink="about">about</a> | 
+        <a routerLink="kefel">kefel</a> |
+        <a routerLink="result/100/100">100 * 100 </a> |
+        <a routerLink="result/123/124">124 * 123 </a> |
+</div>
+<div>
+    <button (click)="goToAboutPage()">Go to about page</button>
+</div>
+<div>
+    <marquee>טקסט מטייל על המסך</marquee>
+</div>
+<div class="router-place-holder">
+    <router-outlet></router-outlet>
+</div>
+<div>
+    <ul>
+        <li>router-outler - place holder</li>
+        <li>routerLink - like href but navigate in SPA mode</li>
+        <li>routerLinkActive - toggle css by matching url</li>
+    </ul>
+    &copy; johnbryce 2019.
+</div>
