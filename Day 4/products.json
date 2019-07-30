@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 7,
+      "name": "asdasd",
+      "price": 12,
+      "image": "http://placehold.it/300x300/999/CCC",
+      "detail": "asdadad"
+    },
+    {
+      "id": 51,
+      "name": "Bisli",
+      "price": 90,
+      "image": "http://placehold.it/300x300/999/CCC",
+      "detail": "Osem product"
+    },
+    {
+      "id": 52,
+      "name": "asdasdasd",
+      "price": 21,
+      "image": "adadadadasd",
+      "detail": "dasdasd"
+    },
+    {
+      "id": 53,
+      "name": "Kefli",
+      "price": 27,
+      "image": "http://placehold.it/300x300/999/CCC",
+      "detail": "a;sldka;lskd"
+    }
+  ]
+}
